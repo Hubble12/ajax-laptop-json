@@ -1,42 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="theme-color" content="#f4f6f8">
+    <title>Gaming Laptop Pro X15 | TechMaster</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div id="d1_upper" class="divsPage">
-        <img id="kep1" src="" alt="laptop kép">
-        <div id="kisKepDiv">
-        <img id="kisKep1" src="" alt="laptop kép">
-        <img id="kisKep2" src="" alt="laptop kép">
-        <img id="kisKep3" src="" alt="laptop kép">
-        </div>
-        <h1 id="termekNev"></h1>
-        <h2 id="ertek"></h2>
-        <h2 id="leiras"></h2>
-        <h2 id="raktaron"></h2>
-        <h2 id="ertekeles"></h2>
-        <h2 id="gyarto"></h2>
-        <h2 id="gyarto_orszag"></h2>
-        <h2 id="funkciok"></h2>
-        <h2 id="ertekeles1"></h2>
-        <h2 id="ertekeles2"></h2>
-        <h2 id="ertekeles3"></h2>
-        <h2 id="ertekeles4"></h2>
-    </div>
+    <main class="product-page">
+        <section id="d1_upper" class="product-hero" aria-label="Termék">
+            <div class="gallery">
+                <div class="main-image-frame">
+                    <img id="kep1" src="" alt="Gaming laptop">
+                </div>
+                <div class="thumbnail-list" aria-label="Termékképek">
+                    <div class="thumbnail"><img id="kisKep1" src="" alt="Laptop elölnézet"></div>
+                    <div class="thumbnail"><img id="kisKep2" src="" alt="Laptop oldalnézet"></div>
+                    <div class="thumbnail"><img id="kisKep3" src="" alt="Laptop hátulnézet"></div>
+                </div>
+            </div>
 
+            <div class="product-summary">
+                <span class="new-label">ÚJ</span>
+                <h1 id="termekNev"></h1>
+                <p id="leiras" class="short-description"></p>
+                <div class="rating-line" aria-label="Vásárlói értékelés">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span id="ertekeles" class="rating-value"></span>
+                    <span class="rating-count">(127 értékelés)</span>
+                </div>
+                <p id="ertek" class="price"></p>
+                <div class="stock-badge"><span class="check-icon" aria-hidden="true">✓</span> Raktáron (<span id="raktaron"></span> db)</div>
+                <div class="purchase-actions">
+                    <button class="cart-button" type="button"><span aria-hidden="true">🛒</span> Kosárba</button>
+                    <button class="favorite-button" type="button"><span aria-hidden="true">♡</span> Kedvencekhez</button>
+                </div>
+            </div>
 
+            <aside class="seller-facts" aria-label="Termékadatok">
+                <div class="fact-row">
+                    <span class="fact-icon" aria-hidden="true">▣</span>
+                    <div><span class="fact-label">Gyártó</span><strong id="gyarto"></strong></div>
+                </div>
+                <div class="fact-row">
+                    <span class="fact-icon" aria-hidden="true">◎</span>
+                    <div><span class="fact-label">Származási ország</span><strong id="gyarto_orszag"></strong></div>
+                </div>
+                <div class="fact-row">
+                    <span class="fact-icon" aria-hidden="true">♢</span>
+                    <div><span class="fact-label">Garancia</span><strong>2 év</strong></div>
+                </div>
+                <div class="fact-row">
+                    <span class="fact-icon" aria-hidden="true">▱</span>
+                    <div><span class="fact-label">Szállítás</span><strong>1-3 munkanap</strong></div>
+                </div>
+            </aside>
+        </section>
 
+        <nav class="detail-tabs" aria-label="Termékinformációk">
+            <a class="active" href="#leirasok">Leírás</a>
+            <a href="#jellemzok">Tulajdonságok</a>
+            <a href="#velemenyek">Vélemények (127)</a>
+        </nav>
 
+        <section id="d1_lower" class="detail-grid" aria-label="Részletes termékinformációk">
+            <div id="leirasok" class="description-section">
+                <h2 class="section-title">A játékaid új szintje</h2>
+                <p class="description-copy">A Gaming Laptop Pro X15 a legújabb generációs hardverrel készült, hogy minden játékot és fejlesztői feladatot kompromisszumok nélkül futtass. Erőteljes processzor, nagy memória és villámgyors SSD gondoskodik a zökkenőmentes élményről, miközben a prémium kijelző élethű látványt biztosít.</p>
+                <div class="benefit-grid">
+                    <div class="benefit"><span aria-hidden="true">ϟ</span><strong>Kiemelkedő<br>teljesítmény</strong></div>
+                    <div class="benefit"><span aria-hidden="true">♧</span><strong>Tökéletes<br>játékélmény</strong></div>
+                    <div class="benefit"><span aria-hidden="true">▱</span><strong>Lenyűgöző<br>kijelző</strong></div>
+                    <div class="benefit"><span aria-hidden="true">⚙</span><strong>Fejlesztéshez<br>ideális</strong></div>
+                </div>
+            </div>
 
+            <section id="jellemzok" class="specs-section">
+                <h2 class="section-title">Főbb jellemzők</h2>
+                <ul id="funkciok" class="spec-list"></ul>
+                <div class="spec-item"><span class="spec-icon" aria-hidden="true">▦</span> 15,6” Full HD kijelző</div>
+                <div class="spec-item"><span class="spec-icon" aria-hidden="true">⊞</span> Windows 11</div>
+            </section>
 
-    <div id="d1_lower" class="divsPage"></div>
-
-
+            <section id="velemenyek" class="reviews-section">
+                <h2 class="section-title">Vásárlói vélemények</h2>
+                <article class="review-card">
+                    <span class="review-avatar" aria-hidden="true">K</span>
+                    <div class="review-content"><strong id="ertekeles1"></strong><span class="review-stars" aria-label="5 csillag">★★★★★</span><p id="ertekeles2"></p></div>
+                </article>
+                <article class="review-card">
+                    <span class="review-avatar" aria-hidden="true">N</span>
+                    <div class="review-content"><strong id="ertekeles3"></strong><span class="review-stars" aria-label="5 csillag">★★★★★</span><p id="ertekeles4"></p></div>
+                </article>
+                <a class="all-reviews" href="#velemenyek">Összes vélemény megtekintése <span aria-hidden="true">→</span></a>
+            </section>
+        </section>
+    </main>
 
     <script src="code.js"></script>
 </body>

@@ -8,18 +8,25 @@ const http = new XMLHttpRequest();
         document.getElementById("kisKep1").src= obj.image
         document.getElementById("kisKep2").src= obj.image
         document.getElementById("kisKep3").src= obj.image
-        document.getElementById("termekNev").innerHTML= obj.name
-        document.getElementById("ertek").innerHTML= obj.price + obj.currency
-        document.getElementById("leiras").innerHTML= obj.description
-        document.getElementById("raktaron").innerHTML= obj.stock
-        document.getElementById("ertekeles").innerHTML= obj.rating
-        document.getElementById("gyarto").innerHTML= obj.manufacturer.name
-        document.getElementById("gyarto_orszag").innerHTML= obj.manufacturer.country
-        document.getElementById("funkciok").innerHTML= obj.features
-        document.getElementById("ertekeles1").innerHTML= obj.reviews[0].user
-        document.getElementById("ertekeles2").innerHTML= obj.reviews[0].comment
-        document.getElementById("ertekeles3").innerHTML= obj.reviews[1].user
-        document.getElementById("ertekeles4").innerHTML= obj.reviews[1].comment
+        document.getElementById("termekNev").textContent = obj.name
+        document.getElementById("ertek").textContent = obj.price.toLocaleString("hu-HU") + " " + obj.currency
+        document.getElementById("leiras").textContent = obj.description
+        document.getElementById("raktaron").textContent = obj.stock
+        document.getElementById("ertekeles").textContent = obj.rating
+        document.getElementById("gyarto").textContent = obj.manufacturer.name
+        document.getElementById("gyarto_orszag").textContent = obj.manufacturer.country
+
+        const featureList = document.getElementById("funkciok")
+        obj.features.forEach(function(feature) {
+            const item = document.createElement("li")
+            item.textContent = feature
+            featureList.appendChild(item)
+        })
+
+        document.getElementById("ertekeles1").textContent = obj.reviews[0].user
+        document.getElementById("ertekeles2").textContent = obj.reviews[0].comment
+        document.getElementById("ertekeles3").textContent = obj.reviews[1].user
+        document.getElementById("ertekeles4").textContent = obj.reviews[1].comment
         
         
 

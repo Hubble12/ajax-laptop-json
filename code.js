@@ -2,7 +2,18 @@ let obj = new Object();
 const http = new XMLHttpRequest();
     
     http.onload = function(){
-        obj = JSON.parse(this.responseText);
+
+        if (http.status < 200 || http.status >= 300) {
+            alert("Hiba: a termékadatok betöltése nem sikerült.");
+            return;
+        }
+
+        try {
+            obj = JSON.parse(this.responseText);
+        } catch (error) {
+            alert("Hiba: a termékadatok formátuma érvénytelen.");
+            return;
+        }
         console.log(obj.name)
         document.getElementById("kep1").src= obj.image
         document.getElementById("kisKep1").src= obj.image
@@ -35,6 +46,9 @@ const http = new XMLHttpRequest();
 
 
 
+    }
+    http.onerror = function(){
+        alert("Hiba: a JSON nem elérhető.");
     }
     http.open("GET", "termek.json");
     http.send();

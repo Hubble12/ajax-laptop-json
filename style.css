@@ -1,27 +1,28 @@
-/*body{
+body{
     display: grid;
     grid-template_columns: auto;
 }
 
-.divsPage{
-    border: 3px;
+div{
+    border: 1px;
     border-style: dashed;
     border-color: black;
-    height: 350px;
 }
 
 #d1_upper{
+    height: 500px;
 }
 
 #kep1{
-    height: 200px;
+    height: 300px;
     display: inline;
 }
 
 
 #kisKepDiv{
-    display: inline;
-    width: 300px;
+    display: inline-block;
+    width: 200px;
+    height: 450px;
 }
 
 #kisKep1{
@@ -36,6 +37,6 @@
     height: 80px;
     display: inline;
 }
-*/
+
 
 
